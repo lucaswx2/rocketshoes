@@ -3,7 +3,6 @@ import rootReducer from './modules/rootReducer';
 
 const enhancer =
   process.NODE_ENV === 'development' ? console.tron.createEnhancer() : null;
-console.log(process);
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, enhancer);
 
 export default store;
